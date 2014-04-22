@@ -4,13 +4,12 @@ angular
         return {
   	       get: function() { 	
   	          var selectableEventsItem = localStorage.getItem("myschedule_selectable_events");
-  	          var selectableEvents = [];
+  	          var selectableEvents = ["Event1", "Event2", "Event3"];
   	   
-  	          if(selectableEventsItem == null) {
-  		        localStorage.setItem("myschedule_selectable_events", JSON.stringify(selectableEvents));
-  	          } else {
+  	          if(selectableEventsItem != null) {
   		        selectableEvents = JSON.parse(selectableEventsItem);  
-  	          }
+  	          } 
+  	          
   	          return selectableEvents;      	   
     	   },
     	
