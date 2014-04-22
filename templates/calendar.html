@@ -1,0 +1,67 @@
+<div class="container-fluid" >
+   <div class="row-fuild">
+      <div class="col-xs-12">
+	    <div class="row-fuild">
+		  <div class="col-sm-9">
+			<div class="space"></div> 
+            <div id='{{calendarId}}' ng-model="eventSources" calendar="myCalendar" config="uiConfig.calendar" ui-calendar="uiConfig.calendar"></div>
+		  </div>
+	      <div class="col-sm-3 myscheduler-ctrl-container">
+	         
+	        <div class="row-fuild">
+              <div class="col-md-12">      
+	            <h4>Add Draggable Event</h4>
+	          </div>
+	        </div>  
+	        	     
+	        <div class="row-fuild">
+              <div class="col-md-8">      
+	            <input type="text" class="form-control" ng-model="newSelectableEvent"/>
+	          </div>
+	          <div class="col-md-4">  
+	           <button class="btn btn-success" ng-click="addSelectableEvent()">+</button>
+	          </div>
+	        </div>
+	          
+	        <div class="row-fuild spacer">
+              <div class="col-md-12"><br></div>
+	        </div> 
+	                    	        
+	        <div class="row-fuild">
+              <div class="col-md-12">      
+	            <h4>Draggable Events</h4>
+	          </div>
+	        </div>    
+          
+            <div class="row-fuild" ng-repeat="event in selectableEvents track by $index" data-index="{{$index}}" >
+              <div class="col-md-8">
+                 <div class='myscheduler-selectable-event' draggable title="{{event}}" class="form-control">{{event}}</div>
+              </div>
+              <div class="col-md-4"> 
+                 <button class="btn btn-danger" ng-click="removeSelectableEvent($index)" style="text-align:right">-</button> 
+               </div> 
+            </div>                           
+		  
+		  	<div class="row-fuild spacer">
+              <div class="col-md-12"><br></div>
+	        </div>  
+	        
+		 	<div class="row-fuild">
+              <div class="col-md-12"> 
+           	    <button class="btn btn-primary" ng-click="saveScheduledEvents()">Save Scheduled Events</button> 
+                <br>
+                <br> 
+               </div>
+            </div>    
+	        
+	        <div class="row-fuild spacer">
+              <div class="col-md-12">
+                 <p class="text-danger"><strong>Note:</strong></p> 
+                 <p>To delete an event in the calendar, click on the event.</p>
+              </div>
+	        </div>   
+	     </div> 
+	  </div> 
+ </div> 	
+</div>	
+
