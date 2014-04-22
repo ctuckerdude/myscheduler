@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <!-- JQuery -->
+    <script src="js/third_party/jquery/jquery.js"></script>
+    <script src="js/third_party/jquery/jquery-ui.js"></script>
+    
+    <!-- AngularJS  -->
+    <script src="js/third_party/angular/angular.js"></script>
+    <script src="js/third_party/angular/angular-ui-router.js"></script>
+    <script src="js/third_party/angular/calendar.js"></script>   
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.9.0.js"></script>
+    
+    
+    <!-- FullCalendar -->
+    <script src="js/third_party/fullcalendar/fullcalendar.js"></script>
+    <script src="js/third_party/fullcalendar/gcal.js"></script>
+    
+    <!-- App Modules -->
+    <script src="js/modules/app.js"></script>
+    
+    <!-- Controllers -->
+    <script src="js/controllers/homectrl.js"></script>
+    <script src="js/controllers/aboutctrl.js"></script>
+    <script src="js/controllers/calendarctrl.js"></script>
+    
+    <!-- Services -->
+    <script src="js/services/selectable_events.js"></script>
+    <script src="js/services/scheduled_events.js"></script>
+   
+    <!--  Models -->
+    <script src="js/models/scheduled_event.js"></script>
+     
+    <!-- Directives -->
+    <script src="js/directives/draggable.js"></script>
+    <script src="js/directives/droppable.js"></script>
+    
+    <!-- Utils -->
+    <script src="js/util/fullcalendar_util.js"></script>
+    
+    <!--  Constants -->
+    <script src="js/constants/base_constants.js"></script>
+    
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="css/third_party/bootstrap/bootstrap-fullcalendar.css" /> 
+    <link rel="stylesheet" href="css/third_party/fullcalendar/fullcalendar.css" /> 
+    <link rel="stylesheet" href="css/third_party/bootstrap/bootstrap.css" />  
+    <link rel="stylesheet" href="css/third_party/bootstrap/docs.css" />  
+    <link rel="stylesheet" href="css/myschedular.css" />
+    
+</head>
+<body>  
+    <div ng-app="app">
+      <header ng-include="'templates/nav.html'"></header>
+      <div ui-view>
+      </div>
+    </div> 
+</body>
+</html>
